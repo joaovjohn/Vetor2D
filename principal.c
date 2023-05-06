@@ -5,7 +5,7 @@
 // https://github.com/joaovjohn/Vetor2D
 int main() {
     v2d n1, n2, soma, diminuicao;
-    int mod;
+    int mod, intern;
     printf("Digite um valor para o vetor 1: ");
     scanf("%d", &n1.p1);
     printf("Digite outro valor para o vetor 1: ");
@@ -17,6 +17,7 @@ int main() {
     soma = somaVetor(n1,n2);
     diminuicao = subtracao(n1,n2);
     mod = modulo(n1);
+    intern = interno(n1);
     printf("Vetor 1: ");
     mostrar(n1);
     printf("Vetor 2: ");
@@ -25,7 +26,8 @@ int main() {
     mostrar(soma);
     printf("Vetor 1 - Vetor 2 = ");
     mostrar(diminuicao);
-    printf("Módulo: %d\n", mod);
+    printf("Módulo do Vetor 1: %d\n", mod);
+    printf("Produto interno do Vetor 1: %d\n", intern);
     return 0;
 }
 

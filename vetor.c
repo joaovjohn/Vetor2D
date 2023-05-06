@@ -28,7 +28,13 @@ v2d subtracao(v2d v1, v2d v2) {
 
 int modulo(v2d v) {
     int r;
-    r = sqrt(v.p1*v.p1+v.p2 * v.p2);
+    r = sqrt((v.p1*v.p1)+(v.p2 * v.p2));
+    return r;
+}
+
+int interno(v2d v) {
+    int r;
+    r = (v.p1*v.p1)+(v.p2 * v.p2);
     return r;
 }
 

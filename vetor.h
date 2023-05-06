@@ -14,4 +14,6 @@ v2d subtracao(v2d v1, v2d v2);
 
 int modulo (v2d v);
 
+int interno(v2d v);
+
 void mostrar(v2d n);
