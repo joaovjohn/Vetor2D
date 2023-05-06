@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <math.h>
 #include "vetor.h"
+// Comando para compilar com o math.h incluso
+// gcc -Wall principal.c vetor.c -lm -o vetor
+//./vetor
 
 v2d recebePos(int p1, int p2) {
     v2d p;
@@ -23,38 +26,12 @@ v2d subtracao(v2d v1, v2d v2) {
     return r;
 }
 
-double modulo(v2d v) {
-    double r;
-    r = sqrt((v.p1*v.p1)+(v.p2 * v.p2));
+int modulo(v2d v) {
+    int r;
+    r = sqrt(v.p1*v.p1+v.p2 * v.p2);
     return r;
 }
 
 void mostrar(v2d n) {
     printf("<%d, %d>\n", n.p1, n.p2);
-}
-
-int main() {
-    v2d n1, n2, soma, diminuicao;
-    double mod;
-    printf("Digite um valor para o vetor 1: ");
-    scanf("%d", &n1.p1);
-    printf("Digite outro valor para o vetor 1: ");
-    scanf("%d", &n1.p2);
-    printf("Digite um valor para o vetor 2: ");
-    scanf("%d", &n2.p1);
-    printf("Digite outro valor para o vetor 2: ");
-    scanf("%d", &n2.p2);
-    soma = somaVetor(n1,n2);
-    diminuicao = subtracao(n1,n2);
-    mod = modulo(diminuicao);
-    printf("Vetor 1: ");
-    mostrar(n1);
-    printf("Vetor 2: ");
-    mostrar(n2);
-    printf("Vetor 1 + Vetor 2 = ");
-    mostrar(soma);
-    printf("Vetor 1 - Vetor 2 = ");
-    mostrar(diminuicao);
-    printf("Módulo da subtração: %f\n", mod);
-    return 0;
 }
